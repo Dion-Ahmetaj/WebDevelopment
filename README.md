@@ -1,1 +1,1 @@
-# WebDevelopment
+The project concerns the development of a static website for distance learning (e-learning) in the field of Information Technology. The website is implemented with HTML5, CSS and JavaScript, covering 5 basic exercises including structure, formatting, layout, responsive design and forms with validation.
