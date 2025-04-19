@@ -1,0 +1,140 @@
+[
+    {
+      "id": 1,
+      "title": "Neural Networks and Learning Machines",
+      "description": "Ένας ολοκληρωμένος οδηγός για τα τεχνητά νευρωνικά δίκτυα και τη μηχανική μάθηση, που καλύπτει τις τελευταίες εξελίξεις στον τομέα. Περιλαμβάνει διαδικτυακούς αλγορίθμους μάθησης, μεθόδους πυρήνα και μηχανές διανυσμάτων υποστήριξης, θεωρία πληροφοριών και τεχνικές όπως τα φίλτρα Kalman. Παρουσιάζει επίσης τη χρήση νευρωνικών δικτύων ανατροφοδότησης και πειράματα σε υπολογιστή.",
+      "category": 2,
+      "subcategory": 21,
+      "type": "Book",
+      "details": {
+        "authors": ["Simon Haykin"],
+        "pages": 936,
+        "image": "neural-networks-and-ml.jpg",
+        "rating": 4,
+        "reviews": 40,
+        "link": "neural-networks-and-ml-content.html",
+        "publication_date": "2008"
+      },
+      "chapters": [
+        {
+          "title": "Κεφάλαιο 1: Εισαγωγή",
+          "content":"Work on artificial neural networks, commonly referred to as 'neural networks,' has been motivated right from its inception by the recognition that the human brain computes in an entirely different way from the conventional digital computer. The brain is a highly complex, nonlinear, and parallel computer (information-processing system). It has the capability to organize its structural constituents, known as neurons, so as to perform certain computations (e.g., pattern recognition, perception, and motor control) many times faster than the fastest digital computer in existence today. Consider, for example, human vision, which is an information-processing task. It is the function of the visual system to provide a representation of the environment around us and, more important, to supply the information we need to interact with the environment. To be specific, the brain routinely accomplishes perceptual recognition tasks (e.g., recognizing a familiar face embedded in an unfamiliar scene) in approximately 100–200 ms, whereas tasks of much lesser complexity take a great deal longer on a powerful computer.",
+          "image": "chapter1.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 2: Το perceptron του Rosenblatt",
+          "content": "The perceptron is the simplest form of a neural network used for the classification of patterns said to be linearly separable (i.e., patterns that lie on opposite sides of a hyperplane). Basically, it consists of a single neuron with adjustable synaptic weights and bias. The algorithm used to adjust the free parameters of this neural network first appeared in a learning procedure developed by Rosenblatt (1958, 1962) for his perceptron brain model. Indeed, Rosenblatt proved that if the patterns (vectors) used to train the perceptron are drawn from two linearly separable classes, then the perceptron algorithm converges and positions the decision surface in the form of a hyperplane between the two classes. The proof of convergence of the algorithm is known as the perceptron convergence theorem. The perceptron built around a single neuron is limited to performing pattern classification with only two classes (hypotheses). By expanding the output (computation) layer of the perceptron to include more than one neuron, we may correspondingly perform classification with more than two classes. However, the classes have to be linearly separable for the perceptron to work properly. The important point is that insofar as the basic theory of the perceptron as a pattern classifier is concerned, we need consider only the case of a single neuron. The extension of the theory to the case of more than one neuron is trivial.",
+          "image": "chapter2.jpg"
+        },
+        {
+            "title": "Κεφάλαιο 3: Οικοδόμηση μοντέλου μέσω παλινδρόμησης",
+            "content": "There are two classes of regression models: linear and nonlinear. In linear regression models, the dependence of the response on the regressors is defined by a linear function, which makes their statistical analysis mathematically tractable. On the other hand, in nonlinear regression models, this dependence is defined by a nonlinear function, hence the mathematical difficulty in their analysis. In this chapter, we focus attention on linear regression models. Nonlinear regression models are studied in subsequent chapters. The mathematical tractability of linear regression models shows up in this chapter in two ways. First, we use Bayesian theory2 to derive the maximum a posteriori estimate of the vector that parameterizes a linear regression model. Next, we view the parameter estimation problem using another approach, namely, the method of least squares, which is perhaps the oldest parameter-estimation procedure; it was first derived by Gauss in the early part of the 19th century. We then demonstrate the equivalence between these two approaches for the special case of a Gaussian environment.",
+            "image": "chapter3.jpg"
+        },
+        {
+            "title": "Κεφάλαιο 4: O αλγόριθμος ελαχίστου μέσου τετραγώνου",
+            "content": "Rosenblatt’s perceptron, discussed in Chapter 1, was the first learning algorithm for solving a linearly separable pattern-classification problem.The least-mean-square (LMS) algorithm, developed by Widrow and Hoff (1960), was the first linear adaptive-filtering algorithm for solving problems such as prediction and communication-channel equalization. Development of the LMS algorithm was indeed inspired by the perceptron. Though different in applications, these two algorithms share a common feature: They both involve the use of a linear combiner, hence the designation “linear.” The amazing thing about the LMS algorithm is that it has established itself not only as the workhorse for adaptive-filtering applications, but also as the benchmark against which other adaptive-filtering algorithms are evaluated.The reasons behind this amazing track record are multifold: • In terms of computational complexity, the LMS algorithm’s complexity is linear with respect to adjustable parameters, which makes the algorithm computationally efficient, yet the algorithm is effective in performance. • The algorithm is simple to code and therefore easy to build. • Above all, the algorithm is robust with respect to external disturbances",
+            "image": "chapter4.jpg"
+        },
+        {
+            "title": "Κεφάλαιο 5: Πολυεπίπεδα perceptrons",
+            "content": "In Chapter 1, we studied Rosenblatt’s perceptron, which is basically a single-layer neural network.Therein, we showed that this network is limited to the classification of linearly separable patterns. Then we studied adaptive filtering in Chapter 3, using Widrow and Hoff’s LMS algorithm. This algorithm is also based on a single linear neuron with adjustable weights, which limits the computing power of the algorithm. To overcome the practical limitations of the perceptron and the LMS algorithm, we look to a neural network structure known as the multilayer perceptron. The following three points highlight the basic features of multilayer perceptrons: • The model of each neuron in the network includes a nonlinear activation function that is differentiable. • The network contains one or more layers that are hidden from both the input and output nodes. • The network exhibits a high degree of connectivity, the extent of which is determined by synaptic weights of the network",
+            "image": "chapter5.jpg"
+        },
+        {
+            "title": "Κεφάλαιο 6: Μέθοδοι πυρήνα και δίκτυα συναρτήσεων ακτινικής βάσης",
+            "content": "The supervised training of a neural network may be approached in several different ways.The back-propagation learning algorithm for multilayer perceptrons, described in Chapter 4, may be viewed as the application of a recursive technique known in statistics as stochastic approximation. In this chapter, we take a completely different approach. Specifically, we solve the problem of classifying nonlinearly separable patterns by proceeding in a hybrid manner, involving two stages:• The first stage transforms a given set of nonlinearly separable patterns into a new set for which, under certain conditions, the likelihood of the transformed patterns becoming linearly separable is high; the mathematical justification of this transformation is traced to an early paper by Cover (1965). • The second stage completes the solution to the prescribed classification problem by using least-squares estimation that was discussed in Chapter 2.",
+            "image": "chapter6.jpg"
+        },
+        {
+            "title": "Κεφάλαιο 7: Μηχανές διανυσμάτων υποστήριξης",
+            "content": "In Chapter 4, we studied multilayer perceptrons trained with the back-propagation algorithm. The desirable feature of this algorithm is its simplicity, but the algorithm converges slowly and lacks optimality. In Chapter 5, we studied another class of feedforward networks known as radial-basis function networks, which we developed from interpolation theory; we then described a suboptimal two-stage procedure for its design. In this chapter, we study another category of feedforward networks known collectively as support vector machines (SVMs).1 Basically, the support vector machine is a binary learning machine with some highly elegant properties.To explain how the machine works, it is perhaps easiest to start with the case of separable patterns that arise in the context of pattern classification. In this context, the main idea behind the machine may be summed up as follows: Given a training sample, the support vector machine constructs a hyperplane as the decision surface in such a way that the margin of separation between positive and negative examples is maximized.",
+            "image": "chapter7.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 8: Θεωρία κανονικοποίησης",
+          "content": "In looking over the supervised-learning algorithms derived in previous chapters of the book, we find that despite the differences in their compositions, they do share a common viewpoint: The training of a network by means of examples, designed to retrieve an output pattern when presented with an input pattern, is equivalent to the construction of a hypersurface (i.e., multidimensional mapping) that defines the output pattern in terms of the input pattern. Learning from examples as described here is an inverse problem, in the sense that its formulation builds on knowledge obtained from examples of the corresponding direct problem; the latter type of problem involves underlying physical laws that are unknown. In real-life situations, however, we usually find that the training sample suffers from a serious limitation: The information content of a training sample is ordinarily not sufficient by itself to reconstruct the unknown input–output mapping uniquely—hence the possibility of overfitting by a learning machine.",
+          "image": "chapter8.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 9: Ανάλυση κύριων συνιστωσών",
+          "content": "An important property of neural networks is their ability to learn from their environment and, through training, to improve their performance in some statistical sense. Except for the discussion on semisupervised learning in Chapter 7, the focus in previous chapters has been on algorithms for supervised learning, for which a training sample is provided. In supervised learning, the training sample embodies a set of examples on a desired input–output mapping, which the network is required to approximate. In this and the next three chapters, we take a new direction: We study algorithms for unsupervised learning. In unsupervised learning, the requirement is to discover significant patterns, or features, of the input data through the use of unlabeled examples. That it to say, the network operates in accordance with the rule: Learn from examples without a teacher.",
+          "image": "chapter9.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 10: Αυτο-οργανωτικοί χάρτες",
+          "content": "In this chapter, we continue our study of self-organizing systems by considering a special class of artificial neural networks known as self-organizing maps.These networks are based on competitive learning; the output neurons of the network compete among themselves to be activated or fired, with the result that only one output neuron, or one neuron per group, is on at any one time.An output neuron that wins the competition is called a winner-takesall neuron, or simply a winning neuron. 1 One way of inducing a winner-takes-all competition among the output neurons is to use lateral inhibitory connections (i.e., negative feedback paths) between them;such an idea was originally proposed by Rosenblatt (1958). In a self-organizing map, the neurons are placed at the nodes of a lattice that is usually one or two dimensional. Higher-dimensional maps are also possible but not as common. The neurons become selectively tuned to various input patterns (stimuli) or classes of input patterns in the course of a competitive-learning process. The locations of the neurons so tuned (i.e., the winning neurons) become ordered with respect to each other in such a way that a meaningful coordinate system for different input features is created over the lattice. A self-organizing map is therefore characterized by the formation of a topographic map of the input patterns, in which the spatial locations (i.e., coordinates) of the neurons in the lattice are indicative of intrinsic statistical features contained in the input patterns—hence, the name “self-organizing map.”",
+          "image": "chapter10.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 11: Πληροφοριοθεωρητικά μοντέλα μάθησης",
+          "content": "In a classic paper published in 1948, Claude Shannon laid down the foundations of information theory. Shannon’s original work on information theory,1 and its refinement by other researchers, was in direct response to the need of electrical engineers to design communication systems that are both efficient and reliable. In spite of its practical origins, information theory as we know it today is a deep mathematical theory concerned with the very essence of the communication process. The theory provides a framework for the study of fundamental issues such as the efficiency of information representation and the limitations involved in the reliable transmission of information over a communication channel. Moreover, the theory encompasses a multitude of powerful theorems for computing ideal bounds on the optimum representation and transmission of information-bearing signals.These bounds are important because they provide benchmarks for the improved design of information-processing systems. The main purpose of this chapter is to discuss information-theoretic models that lead to self-organization in a principled manner. In this context, a model that deserves special mention is the maximum mutual information principle due to Linsker (1988a,b). This principle states the following: The synaptic connections of a multilayered neural network develop in such a way as to maximize the amount of information that is preserved when signals are transformed at each processing stage of the network, subject to certain constraints.",
+          "image": "chapter11.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 12: Στοχαστικές μέθοδοι που έχουν τις ρίζες τους στη στατιστική μηχανική",
+          "content": "For our last class of unsupervised (self-organized) learning systems, we turn to statistical mechanics as the source of ideas.The subject of statistical mechanics encompasses the formal study of macroscopic equilibrium properties of large systems of elements that are subject to the microscopic laws of mechanics.The main aim of statistical mechanics is to derive the thermodynamic properties of macroscopic bodies starting from the motion of microscopic elements such as atoms and electrons (Landau and Lifshitz, 1980; Parisi, 1988).The number of degrees of freedom encountered here is enormous, making the use of probabilistic methods mandatory.As with Shannon’s information theory, the concept of entropy plays a vital role in the study of statistical mechanics. In this context, we may say the following: The more ordered the system, or the more concentrated the underlying probability distribution, the smaller the entropy will be. By the same token, we can say that the more disordered the system, or the more uniform the underlying probability distribution, the larger the entropy will be. In 1957, Jaynes showed that entropy can be used not only as the starting point of formulating statistical inference as described in the previous chapter, but also for generating the Gibbs distribution that is basic to the study of statistical mechanics.",
+          "image": "chapter12.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 13: Δυναμικός προγραμματισμός",
+          "content": "In the introductory chapter, we identified two main paradigms of learning: learning with a teacher and learning without a teacher.The paradigm of learning without a teacher is subdivided into self-organized (unsupervised) learning and reinforcement learning. Different forms of learning with a teacher, or supervised learning, were covered in Chapters 1 through 6, and different forms of unsupervised learning were discussed in Chapters 9 through 11. Semisupervised learning was discussed in Chapter 7. In this chapter, we discuss reinforcement learning. Supervised learning is a “cognitive” learning problem performed under the tutelage of a teacher. It relies on the availability of an adequate set of input–output examples that are representative of the operating environment. In contrast, reinforcement learning is a “behavioral” learning problem. It is performed through interaction between an agent and its environment, in which the agent or decision maker seeks to achieve a specific goal despite the presence of uncertainties (Barto et al., 1983; Sutton and Barto, 1998). The fact that this interaction is performed without a teacher makes reinforcement learning particularly attractive for dynamic situations, where it is costly or difficult (if not impossible) to gather a satisfactory set of input–output examples.",
+          "image": "chapter13.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 14: Νευροδυναμική",
+          "content": "The use of recurrent networks as associative memories is considered in this chapter, and their use as mappers is deferred to Chapter 15. Whichever one of these two is the application of interest, an issue of particular concern is that of stability, which is considered in this chapter. Feedback is like a double-edged sword in that when it is applied improperly, it can produce harmful effects. In particular, the application of feedback can cause a system that is originally stable to become unstable. Our primary interest in this chapter is in the stability of recurrent networks",
+          "image": "chapter14.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 15: Μπεϋζιανό φιλτράρισμα για την εκτίμηση της κατάστασης δυναμικού συστήματος",
+          "content": "In the neurodynamic systems studied in Chapter 13, the main issue of concern was stability. In this chapter, we consider another important issue: estimation of the state of a dynamic system, given a sequence of observations dependent on the state in some fashion.The observations take place in discrete time, not for mathematical convenience, but because that is how they arise naturally. Moreover, the state is not only unknown, but also hidden from the observer. We may therefore view the state-estimation problem as an inverse problem.",
+          "image": "chapter15.jpg"
+        },
+        {
+          "title": "Κεφάλαιο 16: Δυναμικά επαναλαμβανόμενα δίκτυα",
+          "content": "In this chapter, we study the other important application of recurrent networks: input–output mapping, the study of which naturally benefits from Chapter 14 on sequential state estimation. Consider, for example, a multilayer perceptron with a single hidden layer as the basic building block of a recurrent network. The application of global feedback around the multilayer perceptron can take a variety of forms. We may apply feedback from the outputs of the hidden layer of the multilayer perceptron to the input layer.Alternatively, we may apply the feedback from the output layer to the input of the hidden layer.We may even go one step further and combine all these possible feedback loops in a single recurrent network structure. We may also, of course, consider other neural network configurations as the building blocks for the construction of recurrent networks.The important point is that recurrent networks have a very rich repertoire of architectural layouts, which makes them all the more powerful in computational terms. By definition, the input space of a mapping network is mapped onto an output space. For this kind of application, a recurrent network responds temporally to an externally applied input signal.We may therefore speak of the recurrent networks considered in this chapter as dynamically driven recurrent networks—hence the title of the chapter. Moreover, the application of feedback enables recurrent networks to acquire state representations, which makes them desirable tools for such diverse applications as nonlinear prediction and modeling, adaptive equalization of communication channels, speech processing, and plant control, to name just a few.",
+          "image": "chapter16.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Εισαγωγή στην Python",
+      "description": "Μάθετε τα βασικά της Python για αρχάριους.",
+      "category": 4,
+      "subcategory": 41,
+      "type": "Book",
+      "details": {
+        "authors": ["Al Sweigart"],
+        "pages": 504,
+        "image": "python-book.jpg",
+        "rating": 4.8,
+        "reviews": 1500,
+        "link": "python-content.html"
+      },
+      "chapters": [
+        {
+          "title": "Κεφάλαιο 1: Εισαγωγή στην Python",
+          "content": "Μάθετε για τις βασικές αρχές της Python...",
+          "image": "chapter-python-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "But What is a Neural Network?",
+      "description": "Μια εισαγωγή στις βασικές αρχές λειτουργίας των νευρωνικών δικτύων.",
+      "category": 2,
+      "subcategory": 21,
+      "type": "Lecture",
+      "details": {
+        "duration": "15 λεπτά",
+        "year": 2017,
+        "image": "neural-networks-lecture.jpg",
+        "rating": 4.9,
+        "reviews": 20000,
+        "link": "neural-networks-lecture.html"
+      }
+    }
+  ]  

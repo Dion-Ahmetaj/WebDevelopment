@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "el">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <title>Κατηγορία</title>
+    <script src="fetch.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+    <script id="items-template" type="text/x-handlebars-template">
+        {{#each items}}
+        <div class="item">
+            <h3>{{title}}</h3>
+            <img src="images/{{details.image}}" alt="{{title}}" class="item-image">
+            <p>{{description}}</p>
+            {{#if details.author}}
+                <p><strong>Συγγραφέας:</strong> {{details.author}}</p>
+                <p><strong>Εκδότης:</strong> {{details.publisher}}</p>
+                <p><strong>Ημερομηνία Έκδοσης:</strong> {{details.publication_date}}</p>
+            {{else}}
+                <p><strong>Διάρκεια:</strong> {{details.duration}}</p>
+            {{/if}}
+            <p><strong>Αξιολόγηση:</strong> {{details.rating}}★ ({{details.reviews}} αξιολογήσεις)</p>
+            <a href="{{details.link}}">Δείτε περισσότερα</a>
+        </div>
+        {{/each}}
+    </script>
+    
+</head>
+<body>
+    <h1>Αντικείμενα Εκπαιδευτικού Υλικού</h1>
+    <div id="items-container"></div>
+</body>
+</html>

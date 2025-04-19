@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Αρχική Σελίδα</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Φόρτωση Handlebars -->
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+  <!-- Το fetch.js πρέπει να φορτώνεται με defer -->
+  <script src="../fetch.js" defer></script>
+  <!-- Template για τις κατηγορίες -->
+  <script id="category-template" type="text/x-handlebars-template">
+    {{#each categories}}
+      <div class="category">
+        <img src="images/{{image}}" alt="{{name}}" class="category-image" />
+        <h2>{{name}}</h2>
+        <ul class="subcategory-list">
+          {{#each subcategories}}
+            <li><a href="subcategory.html?id={{id}}" class="subcategory-link">{{name}}</a></li>
+          {{/each}}
+        </ul>
+        <a href="category.html?id={{id}}" class="category-link">Δείτε τα αντικείμενα</a>
+      </div>
+    {{/each}}
+  </script>
+</head>
+<body>
+  <div class="grid container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Αρχική</a></li>
+          <li><a href="about.html">Ποιοί Είμαστε</a></li>
+          <li><a href="categories.html">Κατηγορίες</a></li>
+          <li><a href="contact.html">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Κατηγορίες Εκπαιδευτικού Υλικού</h1>
+      <div id="categories-container"></div>
+    </main>
+    <footer>
+      <p>© 2024 LearningHub</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Υποκατηγορία</title>
+    <script src="fetch.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+    <script id="subcategory-template" type="text/x-handlebars-template">
+        {{#each items}}
+        <div class="item">
+            <h2>{{title}}</h2>
+            <img src="images/{{details.image}}" alt="{{title}}" class="item-image">
+            <p>{{description}}</p>
+            {{#if details.author}}
+            <p><strong>Συγγραφέας:</strong> {{details.author}}</p>
+            <p><strong>Εκδότης:</strong> {{details.publisher}}</p>
+            <p><strong>Ημερομηνία Έκδοσης:</strong> {{details.publication_date}}</p>
+            {{else}}
+            <p><strong>Διάρκεια:</strong> {{details.duration}}</p>
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Αντικείμενα Υποκατηγορίας</h1>
+    </header>
+    <main>
+        <div id="items-container"></div>
+    </main>
+    <footer>
+        <p>© 2024 LearningHub</p>
+    </footer>
+</body>
+</html>
